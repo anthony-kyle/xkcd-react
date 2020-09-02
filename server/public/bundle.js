@@ -200,7 +200,7 @@ var Loader = function Loader(props) {
     id: "loader",
     className: props.visibility
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/images/39.gif",
+    src: "/xkcd-react/images/39.gif",
     alt: "loading"
   }));
 };

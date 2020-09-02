@@ -5,7 +5,7 @@ const Loader = (props) => {
   const comic = props.comic
   return (
    <div id="loader" className={props.visibility}>
-     <img src="/images/39.gif" alt="loading" />
+     <img src="/xkcd-react/images/39.gif" alt="loading" />
    </div>
   )
 }
