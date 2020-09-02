@@ -100,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
 
-var baseUrl = '/api/';
+var baseUrl = '/xkcd-react/api/';
 function getCurrentComic() {
   return superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get(baseUrl + 'latest').then(function (response) {
     return parseTranscript(response.body);

@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const baseUrl = '/api/'
+const baseUrl = '/xkcd-react/api/'
 
 export function getCurrentComic(){
   return request
