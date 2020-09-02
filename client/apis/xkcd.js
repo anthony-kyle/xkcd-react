@@ -21,7 +21,6 @@ export function getComicById(id){
 }
 
 function parseTranscript(obj){
-  console.log(obj)
   if (obj.transcript){
     const titleStart = obj.transcript.indexOf('{{')
     const titleEnd = obj.transcript.indexOf('}}') + 2

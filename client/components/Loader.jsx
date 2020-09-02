@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Loader = (props) => {
-  console.log(props)
   const comic = props.comic
   return (
    <div id="loader" className={props.visibility}>

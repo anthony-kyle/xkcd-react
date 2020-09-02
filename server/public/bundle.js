@@ -117,8 +117,6 @@ function getComicById(id) {
 }
 
 function parseTranscript(obj) {
-  console.log(obj);
-
   if (obj.transcript) {
     var titleStart = obj.transcript.indexOf('{{');
     var titleEnd = obj.transcript.indexOf('}}') + 2;
@@ -194,7 +192,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Loader = function Loader(props) {
-  console.log(props);
   var comic = props.comic;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "loader",
