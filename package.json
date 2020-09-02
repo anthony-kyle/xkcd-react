@@ -2,9 +2,9 @@
   "name": "xkcd-react",
   "version": "0.0.1",
   "description": "An XKCD Mirror Using React",
-  "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
+  "repository": "https://github.com/anthony-kyle/xkcd-react.git",
   "main": "server/index.js",
-  "author": "EDA",
+  "author": "Anthony McGrath",
   "license": "ISC",
   "scripts": {
     "client": "webpack-dev-server --hot --inline",
