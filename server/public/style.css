@@ -100,11 +100,57 @@ a:active {
 }
 
 input {
-  border: none;
+  border: solid 1px #dedede;
+  border-radius: 5px;
   background-color: inherit;
   font-size: inherit;
   width: 3em;
   font-family: inherit;
   font-weight: 700;
+}
+
+.transcript {
+  background-color: #ffffff;
+  border: solid 1px #eee;
+  color: #232323;
+  border-radius: 1em;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  margin: 0px auto 2em auto;
+  box-shadow: 0.2em 0.2em 0.4em #cdcdcd;
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  top: 4em;
+}
+
+.transcript a {
+  position: absolute;
+  top:-0.7em;
+  right: -0.7em;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 700;
+  color: #aa4444;
+}
+
+.transcript > a:hover {
+  background-color: rgba(255,255,255,0);
+  opacity: 0.8;
+}
+
+.transcript > a:active {
+  background-color: rgba(255,255,255,0);
+  opacity: 0.9;
+}
+
+#comic .transcript p {
+  margin-bottom: 0.5em;
+}
+
+button {
+  margin-bottom: 2em;
 }
 
