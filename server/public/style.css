@@ -44,6 +44,9 @@ body {
   border: solid 1em #fff;
   border-radius: 1em;
   box-shadow: 0.5em 0.5em 1em #cdcdcd;
+  max-width: 100%;
+  min-width: 500px;
+  height: auto;
 }
 
 #nav {
@@ -74,8 +77,12 @@ a {
   font-size: 1.2em;
   padding: 0.5em;
   text-transform: uppercase;
-  
-  
+}
+
+@media screen and (max-width: 1000px){
+  #nav a {
+    font-size: 0.9em;
+  }
 }
 
 a:hover {
@@ -93,10 +100,6 @@ a:active {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
-}
-
-#comic img {
-  width: auto;
 }
 
 input {

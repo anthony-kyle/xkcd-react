@@ -463,7 +463,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var XkcdComic = function XkcdComic(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+  var comic = props.comic;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(comic.num),
       _useState2 = _slicedToArray(_useState, 2),
       numValue = _useState2[0],
       setValue = _useState2[1];
@@ -478,7 +480,6 @@ var XkcdComic = function XkcdComic(props) {
       buttonClass = _useState6[0],
       setButton = _useState6[1];
 
-  var comic = props.comic;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "comic",
     className: props.visibility

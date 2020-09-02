@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
 const XkcdComic = (props) => {
-  const [numValue, setValue] = useState();
+  const comic = props.comic;
+  const [numValue, setValue] = useState(comic.num);
   const [transClass, setClass] = useState("hidden");
   const [buttonClass, setButton] = useState()
-  const comic = props.comic;
+  
   return (
     <div id="comic" className={props.visibility}>
       <h1>{comic.title}</h1>
