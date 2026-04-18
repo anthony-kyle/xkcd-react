@@ -3,7 +3,6 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  font-family: 'Comic Neue', cursive;
   background-color: #efefef;
 }
 #app {
@@ -11,16 +10,16 @@ body {
   flex-direction: column;
   place-items: center;
   position: relative;
-  
 }
 
-#loader, #comic {
+#loader,
+#comic {
   width: 60%;
   text-align: center;
   margin: 0 auto;
   position: absolute;
   transition: all 0.5s;
-  
+
   height: 800px;
 }
 
@@ -38,6 +37,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.loader-throbber {
+  display: block;
+  animation: loader-throbber-spin 0.85s linear infinite;
+}
+
+@keyframes loader-throbber-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #comic img {
@@ -79,7 +89,7 @@ a {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   #nav a {
     font-size: 0.9em;
   }
@@ -131,7 +141,7 @@ input {
 
 .transcript a {
   position: absolute;
-  top:-0.7em;
+  top: -0.7em;
   right: -0.7em;
   font-size: 1.6em;
   font-style: normal;
@@ -140,12 +150,12 @@ input {
 }
 
 .transcript > a:hover {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   opacity: 0.8;
 }
 
 .transcript > a:active {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   opacity: 0.9;
 }
 
@@ -156,4 +166,3 @@ input {
 button {
   margin-bottom: 2em;
 }
-

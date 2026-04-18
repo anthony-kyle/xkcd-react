@@ -1,28 +1,33 @@
-# A starter webpack project for React
+# xkcd-react
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+A small [xkcd](https://xkcd.com) comic browser built with [Next.js](https://nextjs.org/) (App Router), React 19, and Node.js LTS.
 
-* Fork this repo
-* Rename your repo according to the app you're building
+## Requirements
+
+- Node.js 20.9+ (see `.nvmrc` for the version used in development)
+
+## Setup
 
 ```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
+git clone https://github.com/anthony-kyle/xkcd-react.git
+cd xkcd-react
+npm install
 ```
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
+## Scripts
 
-Additional components should be placed in `client/components`.
+| Command        | Description                                      |
+| -------------- | ------------------------------------------------ |
+| `npm run dev`  | Next.js dev server (http://localhost:3000)       |
+| `npm run build`| Production build                                 |
+| `npm start`    | Run production server after `build`              |
+| `npm test`     | Jest + React Testing Library                     |
+| `npm run lint` | ESLint (`eslint-config-next`)                    |
 
-## Separate client/server
+In development open **http://localhost:3000/**
 
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+Comic JSON is proxied through a Route Handler at `/api/[id]` so the browser does not call xkcd.com directly.
 
+## Deployment
+
+Host with a **Node.js** runtime so Route Handlers run (`next start` or a platform that supports Next.js server features).
