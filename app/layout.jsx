@@ -1,5 +1,5 @@
 import { Comic_Neue } from 'next/font/google'
-
+import { Analytics } from "@vercel/analytics/next"
 import './globals.css'
 
 const comicNeue = Comic_Neue({
@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={comicNeue.className}>
         <div id="app">{children}</div>
+        <Analytics />
       </body>
     </html>
   )
