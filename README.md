@@ -1,28 +1,39 @@
-# A starter webpack project for React
+# xkcd-react
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+A small [xkcd](https://xkcd.com) comic browser built with [Next.js](https://nextjs.org/) (App Router), React 19, and Node.js LTS.
 
-* Fork this repo
-* Rename your repo according to the app you're building
+## Requirements
+
+- Node.js 20.9+ (see `.nvmrc` for the version used in development)
+
+## Setup
 
 ```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
+git clone https://github.com/anthony-kyle/xkcd-react.git
+cd xkcd-react
+npm install
 ```
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
+## Scripts
 
-Additional components should be placed in `client/components`.
+| Command        | Description                                      |
+| -------------- | ------------------------------------------------ |
+| `npm run dev`  | Next.js dev server (http://localhost:3000)       |
+| `npm run build`| Production build                                 |
+| `npm start`    | Run production server after `build`              |
+| `npm test`     | Jest + React Testing Library                     |
+| `npm run lint` | ESLint (`eslint-config-next`)                    |
 
-## Separate client/server
+The app is served under the **`/xkcd-react`** base path (see `next.config.mjs`). In development open:
 
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+**http://localhost:3000/xkcd-react**
 
+Comic JSON is proxied through a Route Handler at `/xkcd-react/api/[id]` so the browser does not call xkcd.com directly.
+
+## Deployment
+
+Host with a **Node.js** runtime so Route Handlers run (`next start` or a platform that supports Next.js server features). Configure your reverse proxy so the site is mounted at `/xkcd-react` if you use that path in production, or change `basePath` in `next.config.mjs` and update `lib/xkcd.js` API paths to match.
+
+## Loader image
+
+The loading spinner expects `public/images/39.gif` (served as `/xkcd-react/images/39.gif`). Add that asset under `public/images/` if you want the animated loader.
