@@ -39,6 +39,17 @@ body {
   align-items: center;
 }
 
+.loader-throbber {
+  display: block;
+  animation: loader-throbber-spin 0.85s linear infinite;
+}
+
+@keyframes loader-throbber-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #comic img {
   border: solid 1em #fff;
   border-radius: 1em;
